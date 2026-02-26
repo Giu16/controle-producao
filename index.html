@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Inventory and Production Control</title>
+<link rel="stylesheet" href="styles.css" />
+<script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Inventory and Production Control System</h1>
+
+    <section id="product-section">
+      <h2>Manage Products</h2>
+      <form id="product-form">
+        <label>
+          Product Code:
+          <input type="text" id="product-code" required minlength="1" placeholder="e.g. P001" />
+        </label>
+        <label>
+          Product Name:
+          <input type="text" id="product-name" required placeholder="e.g. Steel Chair" />
+        </label>
+        <label>
+          Value ($):
+          <input type="number" id="product-value" required min="0" step="0.01" placeholder="e.g. 150.00" />
+        </label>
+        <button type="submit">Add / Update Product</button>
+      </form>
+
+      <div class="table-wrapper">
+        <table id="products-table" aria-label="Products Table">
+          <thead>
+            <tr>
+              <th>Code</th>
+              <th>Name</th>
+              <th>Value ($)</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="material-section">
+      <h2>Manage Raw Materials</h2>
+      <form id="material-form">
+        <label>
+          Material Code:
+          <input type="text" id="material-code" required minlength="1" placeholder="e.g. M001" />
+        </label>
+        <label>
+          Material Name:
+          <input type="text" id="material-name" required placeholder="e.g. Steel" />
+        </label>
+        <label>
+          Stock Quantity:
+          <input type="number" id="material-stock" required min="0" step="1" placeholder="e.g. 500" />
+        </label>
+        <button type="submit">Add / Update Material</button>
+      </form>
+
+      <div class="table-wrapper">
+        <table id="materials-table" aria-label="Materials Table">
+          <thead>
+            <tr>
+              <th>Code</th>
+              <th>Name</th>
+              <th>Stock Qty</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="association-section">
+      <h2>Associate Materials to Products</h2>
+      <form id="association-form">
+        <label>
+          Select Product:
+          <select id="assoc-product-select" required>
+            <option value="" disabled selected>-- Select Product --</option>
+          </select>
+        </label>
+        <label>
+          Select Material:
+          <select id="assoc-material-select" required>
+            <option value="" disabled selected>-- Select Material --</option>
+          </select>
+        </label>
+        <label>
+          Quantity Needed:
+          <input type="number" id="assoc-quantity" required min="1" placeholder="e.g. 10" />
+        </label>
+        <button type="submit">Add / Update Association</button>
+      </form>
+
+      <div class="table-wrapper">
+        <table id="associations-table" aria-label="Associations Table">
+          <thead>
+            <tr>
+              <th>Product Code</th>
+              <th>Product Name</th>
+              <th>Material Code</th>
+              <th>Material Name</th>
+              <th>Quantity Needed</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="production-section">
+      <h2>Production Suggestion</h2>
+      <button id="calculate-production-btn">Calculate Possible Production</button>
+      <div id="production-result" style="display:none; margin-top: 15px;"></div>
+    </section>
+  </div>
+
+
+</body>
+</html>
