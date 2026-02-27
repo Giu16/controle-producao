@@ -32,15 +32,13 @@ Este projeto é um sistema web simples para gerenciar o estoque de matérias-pri
 
 ## Como usar
 
-1. Abra o arquivo `index.html` no seu navegador preferido (Chrome, Firefox, Edge).
+1. Na seção **Gerenciar Produtos**, adicione produtos informando código, nome e valor.
 
-2. Na seção **Gerenciar Produtos**, adicione produtos informando código, nome e valor.
+2. Na seção **Gerenciar Matérias-Primas**, cadastre as matérias-primas com código, nome e quantidade em estoque.
 
-3. Na seção **Gerenciar Matérias-Primas**, cadastre as matérias-primas com código, nome e quantidade em estoque.
+3. Na seção **Associar Matérias-Primas aos Produtos**, associe matérias-primas a produtos indicando a quantidade necessária para produção.
 
-4. Na seção **Associar Matérias-Primas aos Produtos**, associe matérias-primas a produtos indicando a quantidade necessária para produção.
-
-5. Clique no botão **Calcular Produção Possível** para visualizar os produtos que podem ser produzidos, as quantidades e o valor total da produção.
+4. Clique no botão **Calcular Produção Possível** para visualizar os produtos que podem ser produzidos, as quantidades e o valor total da produção.
 
 ---
 
